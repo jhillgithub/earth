@@ -1,10 +1,12 @@
 {
-  "name": "test-rapier",
+  "name": "earth",
+  "source": "src/index.html",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,6 @@
     "@react-three/drei": "^9.19.6",
     "@react-three/fiber": "^8.3.0",
     "@react-three/postprocessing": "^2.6.0",
-    "@react-three/rapier": "^0.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
