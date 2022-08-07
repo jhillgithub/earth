@@ -11,7 +11,7 @@ const App = () => {
             {/* <spotLight position={[-5, 0, 1]} angle={0.3} penumbra={.5} castShadow intensity={2} shadow-bias={-0.0001} /> */}
             <pointLight position={[10, 10, 10]} />
             <hemisphereLight args={[0xffffbb, 0x080820, 1]} />
-            <directionalLight position={[-10, 0, -5]} intensity={.55} color="red" />
+            <directionalLight position={[-10, 0, -5]} intensity={.55} color="orange" />
             <directionalLight position={[-1, -2, -5]} intensity={0.2} color="#0c8cbf" />
             <spotLight position={[5, 0, 5]} intensity={2.5} penumbra={1} angle={0.35} castShadow color="#0c8cbf" />
             <ambientLight intensity={0.2} />
