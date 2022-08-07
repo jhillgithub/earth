@@ -19,11 +19,10 @@ export const Globe = ({ displacementScale = 0.025, size = 1, amount = 50, color 
     <group>
 
       <Sparkles count={amount} scale={size * 2} size={2} speed={.1} />
-      <mesh ref={ref}>
+      <mesh ref={ref} rotation={[0, -Math.PI / 8, 0]}>
         <sphereGeometry args={[1, 100, 100]} />
         <meshStandardMaterial
           {...maps}
-        // roughness={1}
         />
       </mesh>
     </group>
