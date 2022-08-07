@@ -2,7 +2,7 @@ import { Environment, OrbitControls, Stars, Lightformer, ContactShadows } from "
 import { EffectComposer, DepthOfField, Bloom, Noise, Vignette } from '@react-three/postprocessing';
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense, useRef } from "react";
-import { Globe } from "./globe";
+import { Globe, Earth, Clouds } from "./globe";
 
 const App = () => {
     return (
@@ -24,6 +24,7 @@ const App = () => {
                 {/* <fog attach="fog" s args={["blue", 3, 20]} /> */}
                 <OrbitControls />
                 <Globe />
+                {/* <Earth /> */}
                 <EffectComposer>
                     {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} /> */}
                     <Bloom luminanceThreshold={0} luminanceSmoothing={0.5} height={300} />
