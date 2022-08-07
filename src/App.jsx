@@ -6,7 +6,7 @@ import { Globe } from "./globe";
 
 const App = () => {
     return (
-        <Canvas shadows camera={{ position: [0, 1, 6], fov: 30 }}>
+        <Canvas shadows camera={{ position: [0, 1, 7], fov: 30 }}>
             <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
             {/* <spotLight position={[-5, 0, 1]} angle={0.3} penumbra={.5} castShadow intensity={2} shadow-bias={-0.0001} /> */}
             <pointLight position={[10, 10, 10]} />
