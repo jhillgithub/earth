@@ -23,7 +23,8 @@ const App = () => {
                 <Environment preset="city" />
                 {/* <fog attach="fog" s args={["blue", 3, 20]} /> */}
                 <OrbitControls />
-                <Globe />
+                <Globe>
+                </Globe>
                 {/* <Earth /> */}
                 <EffectComposer>
                     {/* <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} /> */}
@@ -37,3 +38,5 @@ const App = () => {
 };
 
 export default App;
+
+
