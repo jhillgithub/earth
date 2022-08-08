@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Html } from "@react-three/drei";
 
-data = [
+const data = [
     {
         lat: 30.266666,
         lon: -97.733330,
