@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Html } from "@react-three/drei";
 
 data = [
