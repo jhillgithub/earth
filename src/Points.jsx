@@ -1,4 +1,5 @@
-import { useEffect, useRef, useMemo } from "react";
+import { useEffect, useRef, useMemo, useState } from "react";
+import { Html } from "@react-three/drei";
 
 data = [
     {
@@ -49,13 +50,30 @@ export const Points = () => {
     return (
         <group>
             {
-                positions && positions.map((pos) => (
-                    <mesh position={pos}>
-                        <sphereBufferGeometry args={[.0125, 16, 16]} />
-                        <meshStandardMaterial color={0xff0000} emissiveIntensity={5} emissive={0x0000ff} />
-                    </mesh>
+                positions && positions.map((pos, i) => (
+                    <Point
+                        key={i}
+                        pos={pos}
+                        name={data.length > 0 && data[i].name}
+                    />
                 ))
             }
         </group>
+    );
+};
+
+const Point = ({ pos, name }) => {
+    const [clicked, click] = useState(false);
+
+    return (
+        <mesh
+            position={pos}
+            scale={clicked ? 1.5 : 1}
+            onClick={(event) => click(!clicked)}
+        >
+            <sphereBufferGeometry args={[.0125, 16, 16]} />
+            <meshStandardMaterial color={0xff0000} emissiveIntensity={5} emissive={0x0000ff} />
+            {clicked && <Html distanceFactor={4}><h4 style={{ margin: 0, padding: 0, color: "white" }}>{name}</h4></Html>}
+        </mesh >
     );
 };
