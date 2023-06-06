@@ -1,15 +1,22 @@
 import { useRef } from "react";
 import { Sparkles, useTexture } from "@react-three/drei";
-import { useFrame } from '@react-three/fiber';
-import clouds from '../assets/earth_clouds_diffuseOriginal.jpg';
-import map from '../assets/earth_diffuseOriginal.png';
-import normalMap from '../assets/earth_normal.jpg';
-import displacementMap from '../assets/earth_height.jpg';
-import aoMap from '../assets/earth_ao.jpg';
+import { useFrame } from "@react-three/fiber";
+import clouds from "../assets/earth_clouds_diffuseOriginal.jpg";
+import map from "../assets/earth_diffuseOriginal.jpg";
+import normalMap from "../assets/earth_normal.jpg";
+import displacementMap from "../assets/earth_height.jpg";
+import aoMap from "../assets/earth_ao.jpg";
 import { Points } from "./Points";
 
-export const Globe = ({ displacementScale = 0.025, size = 1, amount = 50, color = 'white', emissive, glow, ...props }) => {
-
+export const Globe = ({
+  displacementScale = 0.025,
+  size = 1,
+  amount = 50,
+  color = "white",
+  emissive,
+  glow,
+  ...props
+}) => {
   const groupRef = useRef();
 
   useFrame(() => {
@@ -17,7 +24,7 @@ export const Globe = ({ displacementScale = 0.025, size = 1, amount = 50, color 
   });
   return (
     <group {...props}>
-      <Sparkles count={amount} scale={size * 2} size={2} speed={.1} />
+      <Sparkles count={amount} scale={size * 2} size={2} speed={0.1} />
       <group ref={groupRef} rotation={[0, -Math.PI / 8, 0]}>
         <Earth />
         <Points />
@@ -39,10 +46,7 @@ export const Earth = () => {
     <group>
       <mesh>
         <sphereGeometry args={[1, 100, 100]} />
-        {maps &&
-          <meshStandardMaterial
-            {...maps}
-          />}
+        {maps && <meshStandardMaterial {...maps} />}
       </mesh>
     </group>
   );
