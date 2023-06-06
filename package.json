@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@react-three/drei": "^9.74.1",
+    "@react-three/drei": "https://pkg.csb.dev/pmndrs/drei/commit/0808b399/@react-three/drei",
     "@react-three/fiber": "^8.13.0",
     "@react-three/postprocessing": "^2.14.9",
     "react": "^18.2.0",
